@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product3D</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="img/favicon.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header container">
+            <a  class="header__logo">
+                <svg width="110" class="logo" height="27" viewBox="0 0 110 27" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M100.139 10.071H98.7148V16.9222H100.139C102.022 16.9222 102.875 15.7967 102.875 13.5135C102.875 11.2286 102.014 10.071 100.139 10.071Z"
+                        fill="#303030" />
+                    <path
+                        d="M83 6.75C83 5.85489 83.3556 4.99645 83.9885 4.36351C84.6214 3.73058 85.4799 3.375 86.375 3.375H106.625C107.52 3.375 108.379 3.73058 109.011 4.36351C109.644 4.99645 110 5.85489 110 6.75V20.25C110 21.1451 109.644 22.0035 109.011 22.6365C108.379 23.2694 107.52 23.625 106.625 23.625H86.375C85.4799 23.625 84.6214 23.2694 83.9885 22.6365C83.3556 22.0035 83 21.1451 83 20.25V6.75ZM91.748 14.121C92.8381 14.121 93.5283 14.7589 93.5367 15.6397C93.5503 16.5459 92.8162 17.1906 91.7041 17.1906C90.695 17.1838 89.9542 16.6421 89.9019 15.9148H88.0625C88.1131 17.4572 89.3973 18.7633 91.6957 18.7633C93.7882 18.7633 95.5516 17.6496 95.5297 15.7292C95.5078 14.121 94.2691 13.4004 93.3494 13.3127V13.2081C94.0919 13.0899 95.2479 12.3188 95.2192 10.8878C95.1973 9.35888 93.8692 8.23838 91.7548 8.24681C89.5441 8.25525 88.3072 9.48544 88.2549 11.0649H90.1162C90.1533 10.4051 90.7625 9.79763 91.6957 9.79763C92.5934 9.79763 93.2617 10.3545 93.2617 11.1696C93.2684 11.9779 92.6154 12.5786 91.6957 12.5786H90.6292V14.121H91.748ZM96.7126 18.5625H100.407C103.461 18.5625 104.938 16.6944 104.938 13.4747C104.938 10.2786 103.485 8.43919 100.407 8.43919H96.7126V18.5625Z"
+                        fill="#303030" />
+                    <path
+                        d="M1.232 7.608V19H3.232V14.616H6.448C8.752 14.616 10.144 13.24 10.144 11.08C10.144 8.696 8.528 7.608 6.176 7.608H1.232ZM3.232 9.272H5.84C7.104 9.272 8.192 9.656 8.192 11.128C8.192 12.472 7.312 13 6.016 13H3.232V9.272ZM11.8559 7.608V19H13.8399V14.296H16.4959C18.4319 14.296 18.8799 14.936 18.9919 16.728C19.0559 17.784 19.0719 18.568 19.3599 19H21.5039C21.0399 18.488 21.0079 17.528 20.8959 16.168C20.7999 15 20.6559 13.896 19.1999 13.576C20.3999 13.16 21.0879 12.152 21.0879 10.776C21.0879 8.424 19.2959 7.608 17.2479 7.608H11.8559ZM13.8399 9.24H16.7359C17.9359 9.24 19.1039 9.48 19.1039 10.984C19.1039 12.616 17.7919 12.808 16.4799 12.808H13.8399V9.24ZM28.0495 7.336C24.5615 7.336 22.5455 9.96 22.5455 13.304C22.5455 16.856 24.7535 19.272 28.0175 19.272C31.2655 19.272 33.4895 16.856 33.4895 13.304C33.4895 9.768 31.2655 7.336 28.0495 7.336ZM28.0175 9.016C30.1295 9.016 31.4735 10.68 31.4735 13.288C31.4735 15.896 30.1295 17.592 28.0495 17.592C25.9055 17.592 24.5615 15.928 24.5615 13.272C24.5615 10.696 25.9215 9.016 28.0175 9.016ZM35.2938 7.608V19H39.7418C41.5338 19 42.4938 18.68 43.4378 17.736C44.6698 16.504 45.0378 14.808 45.0378 13.112C45.0378 11.288 44.4458 9.752 43.3578 8.776C42.2698 7.8 41.0378 7.608 39.6298 7.608H35.2938ZM37.2778 9.304H39.5018C41.9978 9.304 43.0378 10.872 43.0378 13.208C43.0378 15.544 42.3018 17.32 39.6298 17.32H37.2778V9.304ZM56.0886 7.608H54.0886V14.328C54.0886 16.264 53.7526 17.576 51.4806 17.576C49.6886 17.576 48.7446 16.712 48.7446 14.952V7.608H46.7446V14.552C46.7446 17.704 48.2166 19.224 51.4486 19.224C54.5206 19.224 56.0886 17.72 56.0886 14.584V7.608ZM68.1475 14.664H66.1475C65.9395 16.344 65.0915 17.576 63.2355 17.576C60.8035 17.576 59.8755 15.416 59.8755 13.304C59.8755 11.208 60.8515 9.048 63.2515 9.048C64.7235 9.048 65.7955 9.864 66.0675 11.24H68.0515C67.6675 8.6 65.5555 7.352 63.2835 7.352C59.8275 7.352 57.8595 10.072 57.8595 13.304C57.8595 16.904 59.9715 19.272 63.1875 19.272C66.0355 19.272 67.9395 17.432 68.1475 14.664ZM78.1104 7.608H68.8464V9.336H72.4784V19H74.4784V9.336H78.1104V7.608Z"
+                        fill="#303030" />
+                </svg>
+            </a>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="#works">Our work</a></li>
+                    <li class="menu__item"><a href="#prices">Services and prices</a></li>
+                    <li class="menu__item"><a href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+            <a href=tel:+3805600471 class="header__phone">+38 (068) 560-04-71</a>
+            <div class="header__burger">
+                <span class="burger__line1"></span>
+                <span class="burger__line2"></span>
+                <span class="burger__line3"></span>
+            </div>
+        </header>
+        <main class="main">
+            <section class="skills container">
+                <h6 class="fake-title">fake title</h6>
+                <article class="skills__info">
+                    <h2>
+                        <img src="img/h1.png" alt="modeling
+                        rendering
+                        animation">
+                    </h2>
+                    <ul class="skills__list">
+                        <li class="skills__list-item">Modeling and product visualization</li>
+                        <li class="skills__list-item">Photorealistic package visualisation</li>
+                        <li class="skills__list-item">CGI animation for presentations and ads</li>
+                    </ul>
+                    <a href="#" class="btn"> Get in touch today
+                        <svg class="btn-arrow" width="14" height="9" viewBox="0 0 14 9" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.000366568 5.56264L0.000366686 4.41694L10.5481 4.41694L7.82863 2.12553L8.5085 0.979826L13.2676 4.98979L8.5085 8.99976L7.82863 7.85405L10.5481 5.56264L0.000366568 5.56264Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                </article>
+            </section>
+            <section class="we container">
+                <h3 class="we__title">WE ARE</h3>
+                <article class="we__info">
+                    <h2 class="title">3D studio <br>
+                        <span> based in Vilnius</span>
+                    </h2>
+                    <div class="we__txt">
+                        <p>We help clients all over the world to create
+                            photo-realistic 3d product images
+                            and animations for e-commerce, presentations
+                            and marketing.
+                        </p>
+                        <p>
+                            We can create any virtual objects in static
+                            and motion to solve your business tasks.
+                        </p>
+                    </div>
+                    <ul class="we__list">
+                        <li>7+ years experience</li>
+                        <li>Extreme attention to detail</li>
+                        <li>Fixed prices </li>
+                        <li>Organized approach</li>
+                    </ul>
+                </article>
+                <img src="img/we-img.png" alt="team">
+            </section>
+            <section class="works container" id="works">
+                <h2 class="title works-title">our <span>WORKS</span></h2>
+                <div class="swiper works__swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide" data-swiper-autoplay="2000">
+                            <div class="slide__photos">
+                                <img src="img/clock1.png" alt="clocks">
+                                <img src="img/clock2.png" alt="clocks">
+                            </div>
+                            <div class="slide__photos">
+                                <img src="img/filter1.png" alt="filters">
+                                <img src="img/filter2.png" alt="filters">
+                            </div>
+                            <div class="slide__photos">
+                                <img src="img/printer1.png" alt="printer">
+                                <img src="img/printer2.png" alt="printer">
+                            </div>
+                        </li>
+                        <li class="swiper-slide" data-swiper-autoplay="2000">
+                            <div class="slide__photos">
+                                <img src="img/key1.png" alt="key">
+                                <img src="img/key2.png" alt="key">
+                            </div>
+                            <div class="slide__photos">
+                                <img src="img/coffe1.png" alt="coffee">
+                                <img src="img/coffe2.png" alt="coffee">
+                            </div>
+                            <div class="slide__photos">
+                                <img src="img/razor1.png" alt="razor">
+                                <img src="img/razor2.png" alt="razor">
+                            </div>
+                        </li>
+                        <li class="swiper-slide" data-swiper-autoplay="2000">
+                            <div class="slide__photos">
+                                <img src="img/headphones1.png" alt="headphones">
+                                <img src="img/headphones2.png" alt="headphones">
+                            </div>
+                            <div class="slide__photos">
+                                <img src="img/stand1.png" alt="stand">
+                                <img src="img/stand2.png" alt="stand">
+                            </div>
+                            <div class="slide__photos">
+                                <img src="img/soap.png" alt="soap">
+                                <img src="img/torch.png" alt="torch">
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <a class="swiper-button-prev">
+                    <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.125 16.25L9.27063 15.1044L3.11188 8.9375H19.5V7.3125H3.11188L9.27063 1.14562L8.125 0L0 8.125L8.125 16.25Z"
+                            fill="#8C8C8C" />
+                    </svg>
+                </a>
+                <a class="swiper-button-next">
+                    <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.375 16.25L10.2294 15.1044L16.3881 8.9375H0V7.3125H16.3881L10.2294 1.14562L11.375 0L19.5 8.125L11.375 16.25Z"
+                            fill="#8C8C8C" />
+                    </svg>
+                </a>
+                <div class="works__btns">
+                    <a href="#" class="btn"> Get in touch today
+                        <svg class="btn-arrow" width="14" height="9" viewBox="0 0 14 9" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.000366568 5.56264L0.000366686 4.41694L10.5481 4.41694L7.82863 2.12553L8.5085 0.979826L13.2676 4.98979L8.5085 8.99976L7.82863 7.85405L10.5481 5.56264L0.000366568 5.56264Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                    <a href="#prices" class="works__btn-price">Prices</a>
+                </div>
+            </section>
+            <section class="section3d container">
+                <h6 class="fake-title">fake title</h6>
+                <article class="section3d__article">
+                    <h2 class="title">
+                        3D PRODUCT
+                        <span>RENDERING</span>
+                    </h2>
+                    <div class="section3d__info">
+                        <p>Do you want to get an exact 3D copy or individual images
+                            of your product to show on your website?</p>
+                        <p>Or maybe you need to show customers and investors a product
+                            that is currently under development? The possibilities of 3D
+                            product visualization are endless</p>
+                    </div>
+                    <a href="#prices" class="btn"> Prices
+                        <svg class="btn-arrow" width="14" height="9" viewBox="0 0 14 9" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.000366568 5.56264L0.000366686 4.41694L10.5481 4.41694L7.82863 2.12553L8.5085 0.979826L13.2676 4.98979L8.5085 8.99976L7.82863 7.85405L10.5481 5.56264L0.000366568 5.56264Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                    <p class="section3d__note">It will be enough for us to get your 3D CAD files,
+                        but if you don't have them, you can use drawings,
+                        photos or just ideas in your head. </p>
+                </article>
+                <div class="section3d__swiper swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="img/generator1.png" alt="generator"></li>
+                        <li class="swiper-slide"><img src="img/generator2.png" alt="generator"></li>
+                        <li class="swiper-slide"><img src="img/generator3.png" alt="generator"></li>
+                        <li class="swiper-slide"><img src="img/generator4.png" alt="generator"></li>
+                        <li class="swiper-slide"><img src="img/generator5.png" alt="generator"></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="section3d container">
+                <h6 class="fake-title">fake title</h6>
+                <article class="section3d__article">
+                    <h2 class="title">
+                        3D PACKAGE
+                        <span>RENDERING</span>
+                    </h2>
+                    <div class="section3d__info">
+                        <p>Get photorealistic images of your product packaging for eCommerce,
+                            trade-show banners, magazines, and much more.
+                            We can use your 2D label artwork files to quickly create high-quality
+                            and accurate renderings of your product, ready for publication.</p>
+                        <p>Overpriced photo shoots of your product packaging for advertising
+                            and e-commerce are no longer necessary.</p>
+                    </div>
+                    <a href="#prices" class="btn"> Prices
+                        <svg class="btn-arrow" width="14" height="9" viewBox="0 0 14 9" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.000366568 5.56264L0.000366686 4.41694L10.5481 4.41694L7.82863 2.12553L8.5085 0.979826L13.2676 4.98979L8.5085 8.99976L7.82863 7.85405L10.5481 5.56264L0.000366568 5.56264Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                    <p class="section3d__note">Images of your product can be presented
+                        in a particular environment, in progress,
+                        or in section. </p>
+                </article>
+                <div class="section3d__swiper swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="img/cream1.png" alt="cream"></li>
+                        <li class="swiper-slide"><img src="img/cream2.png" alt="cream"></li>
+                        <li class="swiper-slide"><img src="img/cream3.png" alt="cream"></li>
+                        <li class="swiper-slide"><img src="img/cream4.png" alt="cream"></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="section3d container">
+                <h6 class="fake-title">fake title</h6>
+                <article class="section3d__article">
+                    <h2 class="title">
+                        3D PRODUCT
+                        <span>RENDERING</span>
+                    </h2>
+                    <div class="section3d__info">
+                        <p>Do you want to get an exact 3D copy or individual images
+                            of your product to show on your website?</p>
+                        <p>Or maybe you need to show customers and investors a product
+                            that is currently under development? The possibilities of 3D
+                            product visualization are endless</p>
+                    </div>
+                    <a href="#" class="btn"> Prices
+                        <svg class="btn-arrow" width="14" height="9" viewBox="0 0 14 9" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.000366568 5.56264L0.000366686 4.41694L10.5481 4.41694L7.82863 2.12553L8.5085 0.979826L13.2676 4.98979L8.5085 8.99976L7.82863 7.85405L10.5481 5.56264L0.000366568 5.56264Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                    <p class="section3d__note">It will be enough for us to get your 3D CAD files,
+                        but if you don't have them, you can use drawings,
+                        photos or just ideas in your head. </p>
+                </article>
+                <div class="section3d__video">
+                    <iframe src="https://www.youtube.com/embed/r6168izrh4k" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+
+                    </iframe>
+                </div>
+            </section>
+            <section class="prices container" id="prices">
+                <h3 class="title">our <span>priсes</span></h3>
+                <ul class="prices__cadrds">
+                    <li class="cards__item">
+                        <img src="img/generator1.png" alt="generator">
+                        <h5 class="cards__item-title">3d product rendering</h5>
+                        <ul class="cards__item-list">
+                            <li>3D models creation based
+                                on drawings</li>
+                            <li>Creation of 3D models from photos
+                                and sketches</li>
+                            <li>Processing of scan results</li>
+                            <li>Preparing your model for 3D printing</li>
+                        </ul>
+                        <div class="cards__price">
+                            <span class="price__txt">
+                                from <br>
+                                <span>700$</span>
+                            </span>
+                            <a href="#contacts" class="price__btn">Contact us <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.000366568 5.56264L0.000366686 4.41694L10.5481 4.41694L7.82863 2.12553L8.5085 0.979826L13.2676 4.98979L8.5085 8.99976L7.82863 7.85405L10.5481 5.56264L0.000366568 5.56264Z" fill="white"/>
+                                </svg>
+                                </a>
+                        </div>
+                    </li>
+                    <li class="cards__item">
+                        <img src="img/cream1.png" alt="cream">
+                        <h5 class="cards__item-title">3d package rendering</h5>
+                        <ul class="cards__item-list">
+                            <li>3D models creation based
+                                on drawings</li>
+                            <li>Creation of 3D models from photos
+                                and sketches</li>
+                            <li>Preparation of banners and images</li>
+                            <li>Variable material and color options</li>
+                        </ul>
+                        <div class="cards__price">
+                            <span class="price__txt">
+                                from <br>
+                                <span>600$</span>
+                            </span>
+                            <a href="#contacts" class="price__btn">Contact us <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.000366568 5.56264L0.000366686 4.41694L10.5481 4.41694L7.82863 2.12553L8.5085 0.979826L13.2676 4.98979L8.5085 8.99976L7.82863 7.85405L10.5481 5.56264L0.000366568 5.56264Z" fill="white"/>
+                                </svg>
+                                </a>
+                        </div>
+                    </li>
+                    <li class="cards__item">
+                        <img src="img/clock1.png" alt="clock">
+                        <h5 class="cards__item-title">3d PRODUCT ANIMATION</h5>
+                        <ul class="cards__item-list">
+                            <li>3D models creation</li>
+                            <li>Creation of the environment
+                                and materials</li>
+                            <li>Storyboard</li>
+                            <li>Sound design</li>
+                        </ul>
+                        <div class="cards__price">
+                            <span class="price__txt">
+                                from <br>
+                                <span>3000$</span> <br>
+                                for 30 sec video
+                            </span>
+                            <a href="#contacts" class="price__btn">Contact us <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.000366568 5.56264L0.000366686 4.41694L10.5481 4.41694L7.82863 2.12553L8.5085 0.979826L13.2676 4.98979L8.5085 8.99976L7.82863 7.85405L10.5481 5.56264L0.000366568 5.56264Z" fill="white"/>
+                                </svg>
+                                </a>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="team container">
+                <h2 class="title">THE PRO-3D <span>TEAM</span></h2>
+                <ul class="team__list">
+                    <li class="team__item">
+                        <img src="img/cyril.png" alt="Cyril Genba">
+                        <span class="team__name">Cyril Genba</span>
+                        <span class="team__proffesion">CMO</span>
+                    </li>
+                    <li class="team__item">
+                        <img src="img/yulia.png" alt="Yulia Volynskova">
+                        <span class="team__name">Yulia Volynskova</span>
+                        <span class="team__proffesion">CPO</span>
+                    </li>
+                    <li class="team__item">
+                        <img src="img/crewman.png" alt="Max Volynsckov">
+                        <span class="team__name">Max Volynsckov</span>
+                        <span class="team__proffesion">CEO</span>
+                    </li>
+                    <li class="team__item">
+                        <img src="img/crewman.png" alt="Apas Yancauscas">
+                        <span class="team__name">Apas Yancauscas</span>
+                        <span class="team__proffesion">Chief 3D designer</span>
+                    </li>
+                </ul>
+            </section>
+            <section class="contacts container" id="contacts">
+                <h2 class="title">Our <span>priority</span></h2>
+                <p class="contacts__note">is to turn a good working relationship into
+                    a long-term collaboration!</p>
+                    <div class="contacts__links">
+                        <h4 class="links__title">contacts:</h4>
+                        <ul class="links__items">
+                            <li class="links__item"><img src="img/phone-icon.svg" alt="phone"><a href=tel:+3805600471 class="links__phone">+38 (068) 560-04-71</a></li>
+                            <li class="links__item"><img src="img/mail-icon.svg" alt=""><a href="mailto:sasha.polishu0@gmail.com">sasha.polishu0@gmail.com</a></li>
+                        </ul>
+                    </div>
+            </section>
+            <section class="feedback container">
+                <h2 class="title">contact us <span>to discuss your
+                    project</span>
+                    </h2>
+                    <div class="feedback__body">
+                        <form action="@sasha" class="feedback__form">
+                            <input type="text" placeholder="name">
+                            <input type="email" placeholder="Email">
+                            <input type="tel" placeholder="Phone">
+                            <textarea name="project" id="project" cols="30"  rows="10" placeholder="Describe your project"></textarea>
+                            <a href="#contacts">Contact us <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.000366568 5.56264L0.000366686 4.41694L10.5481 4.41694L7.82863 2.12553L8.5085 0.979826L13.2676 4.98979L8.5085 8.99976L7.82863 7.85405L10.5481 5.56264L0.000366568 5.56264Z" fill="white"/>
+                                </svg>
+                                </a>
+                        </form>
+                        <div class="feedback__book">
+                            <p class="book__txt">Book a free video-consultation</p>
+                            <a href="#" class="book__btn">Schedule</a>
+                        </div>
+                    </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-container container">
+                <a href="#" class="footer__logo"><svg width="110" height="27" viewBox="0 0 110 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M100.139 10.071H98.7148V16.9222H100.139C102.022 16.9222 102.875 15.7967 102.875 13.5135C102.875 11.2286 102.014 10.071 100.139 10.071Z" fill="#303030"/>
+                    <path d="M83 6.75C83 5.85489 83.3556 4.99645 83.9885 4.36351C84.6214 3.73058 85.4799 3.375 86.375 3.375H106.625C107.52 3.375 108.379 3.73058 109.011 4.36351C109.644 4.99645 110 5.85489 110 6.75V20.25C110 21.1451 109.644 22.0035 109.011 22.6365C108.379 23.2694 107.52 23.625 106.625 23.625H86.375C85.4799 23.625 84.6214 23.2694 83.9885 22.6365C83.3556 22.0035 83 21.1451 83 20.25V6.75ZM91.748 14.121C92.8381 14.121 93.5283 14.7589 93.5367 15.6397C93.5503 16.5459 92.8162 17.1906 91.7041 17.1906C90.695 17.1838 89.9542 16.6421 89.9019 15.9148H88.0625C88.1131 17.4572 89.3973 18.7633 91.6957 18.7633C93.7882 18.7633 95.5516 17.6496 95.5297 15.7292C95.5078 14.121 94.2691 13.4004 93.3494 13.3127V13.2081C94.0919 13.0899 95.2479 12.3188 95.2192 10.8878C95.1973 9.35888 93.8692 8.23838 91.7548 8.24681C89.5441 8.25525 88.3072 9.48544 88.2549 11.0649H90.1162C90.1533 10.4051 90.7625 9.79763 91.6957 9.79763C92.5934 9.79763 93.2617 10.3545 93.2617 11.1696C93.2684 11.9779 92.6154 12.5786 91.6957 12.5786H90.6292V14.121H91.748ZM96.7126 18.5625H100.407C103.461 18.5625 104.938 16.6944 104.938 13.4747C104.938 10.2786 103.485 8.43919 100.407 8.43919H96.7126V18.5625Z" fill="#303030"/>
+                    <path d="M1.232 7.608V19H3.232V14.616H6.448C8.752 14.616 10.144 13.24 10.144 11.08C10.144 8.696 8.528 7.608 6.176 7.608H1.232ZM3.232 9.272H5.84C7.104 9.272 8.192 9.656 8.192 11.128C8.192 12.472 7.312 13 6.016 13H3.232V9.272ZM11.8559 7.608V19H13.8399V14.296H16.4959C18.4319 14.296 18.8799 14.936 18.9919 16.728C19.0559 17.784 19.0719 18.568 19.3599 19H21.5039C21.0399 18.488 21.0079 17.528 20.8959 16.168C20.7999 15 20.6559 13.896 19.1999 13.576C20.3999 13.16 21.0879 12.152 21.0879 10.776C21.0879 8.424 19.2959 7.608 17.2479 7.608H11.8559ZM13.8399 9.24H16.7359C17.9359 9.24 19.1039 9.48 19.1039 10.984C19.1039 12.616 17.7919 12.808 16.4799 12.808H13.8399V9.24ZM28.0495 7.336C24.5615 7.336 22.5455 9.96 22.5455 13.304C22.5455 16.856 24.7535 19.272 28.0175 19.272C31.2655 19.272 33.4895 16.856 33.4895 13.304C33.4895 9.768 31.2655 7.336 28.0495 7.336ZM28.0175 9.016C30.1295 9.016 31.4735 10.68 31.4735 13.288C31.4735 15.896 30.1295 17.592 28.0495 17.592C25.9055 17.592 24.5615 15.928 24.5615 13.272C24.5615 10.696 25.9215 9.016 28.0175 9.016ZM35.2938 7.608V19H39.7418C41.5338 19 42.4938 18.68 43.4378 17.736C44.6698 16.504 45.0378 14.808 45.0378 13.112C45.0378 11.288 44.4458 9.752 43.3578 8.776C42.2698 7.8 41.0378 7.608 39.6298 7.608H35.2938ZM37.2778 9.304H39.5018C41.9978 9.304 43.0378 10.872 43.0378 13.208C43.0378 15.544 42.3018 17.32 39.6298 17.32H37.2778V9.304ZM56.0886 7.608H54.0886V14.328C54.0886 16.264 53.7526 17.576 51.4806 17.576C49.6886 17.576 48.7446 16.712 48.7446 14.952V7.608H46.7446V14.552C46.7446 17.704 48.2166 19.224 51.4486 19.224C54.5206 19.224 56.0886 17.72 56.0886 14.584V7.608ZM68.1475 14.664H66.1475C65.9395 16.344 65.0915 17.576 63.2355 17.576C60.8035 17.576 59.8755 15.416 59.8755 13.304C59.8755 11.208 60.8515 9.048 63.2515 9.048C64.7235 9.048 65.7955 9.864 66.0675 11.24H68.0515C67.6675 8.6 65.5555 7.352 63.2835 7.352C59.8275 7.352 57.8595 10.072 57.8595 13.304C57.8595 16.904 59.9715 19.272 63.1875 19.272C66.0355 19.272 67.9395 17.432 68.1475 14.664ZM78.1104 7.608H68.8464V9.336H72.4784V19H74.4784V9.336H78.1104V7.608Z" fill="#303030"/>
+                    </svg>
+                    </a>
+                <nav class="footer__menu">
+                    <ul class="footer-menu__list">
+                        <li class="menu__item"><a href="#works">Our work</a></li>
+                        <li class="menu__item"><a href="#prices">Services and prices</a></li>
+                        <li class="menu__item"><a href="#contacts">Contacts</a></li>
+                    </ul>
+                </nav>
+                <a href=tel:+3805600471 >+38 (068) 560-04-71</a>
+            </div>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script type="module">
+        const swiper = new Swiper('.works__swiper', {
+            clickable: true,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 8000,
+            },
+        });
+    </script>
+    <script type="module">
+        const swiper2 = new Swiper('.section3d__swiper', {
+            clickable: true,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+            },
+        });
+    </script>
+</body>
+
+</html>
